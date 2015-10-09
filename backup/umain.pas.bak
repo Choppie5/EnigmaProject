@@ -5,7 +5,7 @@ unit uMain;
 interface
 
 uses
-  Classes, SysUtils, FileUtil, Forms, Controls, Graphics, Dialogs, StdCtrls;
+  Classes, SysUtils, FileUtil, Forms, Controls, Graphics, Dialogs, StdCtrls, StrUtils;
 
 type
 
@@ -167,11 +167,8 @@ begin
        until RotRight[1,a] = ToFind;
        ToFind := RotRight[2,a];
 
-       //Reflector
-       if a <= 13 then
-          a := 13 + (13 - (a-1))
-       else
-          a := 13 - ((a+1) - 13);
+    {   //Reflector
+       a := 27 - a;
        ToFind := chr(a+64);
        a := 0;
 
@@ -194,7 +191,7 @@ begin
          a := a + 1;
        until RotLeft[2,a] = ToFind;
        ToFind := RotLeft[1,a];
-       a := 0;
+       a := 0;   }
 
        CipherTxtStr := CipherTxtStr + ToFind;
        ebCipherText.Text := CipherTxtStr;
@@ -210,7 +207,7 @@ end;
 
 procedure TfrmMain.btnDecryptClick(Sender: TObject);
 var
-  PlainTxtStr, CipherTxtStr : String;
+  PlainTxtStr, CipherTxtStr, TempStr : String;
   CipherTxtLength, i, a : Integer;
   ToFind : Char;
 begin
@@ -219,8 +216,10 @@ begin
      ebRotor2.Enabled := False;
      ebRotor3.Enabled := False;
      ebPlainText.ReadOnly := True;
-     CipherTxtStr := ebCipherText.Text;
+     TempStr := ebCipherText.Text;
+     CipherTxtStr := ReverseString(TempStr);
      CipherTxtLength := Length(CipherTxtStr);
+     MoveRotors(1);
      for i := 1 to CipherTxtLength do
      begin
        ToFind := decryptMessage(CipherTxtStr, upcase(CipherTxtStr[i]));

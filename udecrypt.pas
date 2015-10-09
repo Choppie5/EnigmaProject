@@ -38,12 +38,9 @@ begin
        ToFind := RotRight[1,a];
 
        //Reflector
-       if a <= 13 then
-          a := 13 + (13 - (a-1))
-       else
-          a := 13 - ((a+1) - 13);
+       a := 27 - a;
        ToFind := chr(a+64);
-       a := 0;
+       a := 0;         {
 
        //Fourth Rotor (third reversed)
        repeat
@@ -64,7 +61,7 @@ begin
          a := a + 1;
        until RotLeft[1,a] = ToFind;
        ToFind := RotLeft[2,a];
-       a := 0;
+       a := 0; }
 
        result := ToFind;
 end;

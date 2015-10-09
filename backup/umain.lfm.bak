@@ -1,7 +1,7 @@
 object frmMain: TfrmMain
-  Left = 172
+  Left = 277
   Height = 240
-  Top = 345
+  Top = 207
   Width = 320
   Caption = 'Enigma Encryption'
   ClientHeight = 240
