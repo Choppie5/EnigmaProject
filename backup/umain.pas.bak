@@ -13,6 +13,7 @@ type
 
   TfrmMain = class(TForm)
     btnEncrypt: TButton;
+    btnDecrypt: TButton;
     ebRotor1: TEdit;
     ebRotor2: TEdit;
     ebRotor3: TEdit;
@@ -23,28 +24,30 @@ type
     lbRotor1: TLabel;
     Label2: TLabel;
     Label3: TLabel;
+    procedure btnDecryptClick(Sender: TObject);
     procedure btnEncryptClick(Sender: TObject);
     procedure ebRotor1Change(Sender: TObject);
     procedure FormCreate(Sender: TObject);
     procedure CipherRotors;
     procedure InitRotors;
-    procedure MoveRotors;
+    procedure MoveRotors(rWay : integer);
   private
     { private declarations }
   public
     { public declarations }
   end;
 
-var
-  frmMain: TfrmMain;
-  type TRotor = array[1..2,1..26] of Char;
+  TRotor = array[1..2,1..26] of Char;
   //2D Array. Use [1,x] for Plaintext Alphabet and [2,x] for cipher. Use alphabetical characters only.
-implementation
 
 var
+  frmMain: TfrmMain;
   RotLeft : TRotor;
   RotMid : TRotor;
   RotRight : TRotor;
+implementation
+
+uses uDecrypt, uRotors;
 
 {$R *.lfm}
 
@@ -55,60 +58,17 @@ begin
      //empty
 end;
 
-procedure TfrmMain.MoveRotors;
+procedure TfrmMain.MoveRotors(rWay : Integer);
 var
   LTemp, MTemp, RTemp : Char;
   i : Integer;
   LBeg, MBeg, RBeg : String;
 begin
-     if RotLeft[2,1] <> 'Z' then
-        begin
-          LTemp := RotLeft[2,1];
-          for i := 1 to 25 do
-          begin
-            RotLeft[2,i] := RotLeft[2,i+1];
-          end;
-          RotLeft[2,26] := LTemp;
-        end
+     if rWay = 0 then
+        MoveRotorsForwards
      else
-         if RotMid[2,1] <> 'Z' then
-            begin
-              LTemp := RotLeft[2,1];
-              MTemp := RotMid[2,1];
-              for i := 1 to 25 do
-              begin
-                RotLeft[2,i] := RotLeft[2,i+1];
-                RotMid[2,i] := RotMid[2,i+1];
-              end;
-              RotLeft[2,26] := LTemp;
-              RotMid[2,26] := MTemp;
-            end
-         else
-             if RotRight[2,1] <> 'Z' then
-                begin
-                  LTemp := RotLeft[2,1];
-                  MTemp := RotMid[2,1];
-                  RTemp := RotRight[2,1];
-                  for i := 1 to 25 do
-                  begin
-                    RotLeft[2,i] := RotLeft[2,i+1];
-                    RotMid[2,i] := RotMid[2,i+1];
-                    RotRight[2,i] := RotRight[2,i+1];
-                  end;
-                  RotLeft[2,26] := LTemp;
-                  RotMid[2,26] := MTemp;
-                  RotRight[2,26] := RTemp;
-                end
-             else
-                 if RotRight[2,1] = 'Z' then
-                    begin
-                      for i := 1 to 26 do
-                      begin
-                        RotLeft[2,i] := chr(64+i);
-                        RotMid[2,i] := chr(64+i);
-                        RotRight[2,i] := chr(64+i);
-                      end;
-                    end;
+         MoveRotorsBackwards;
+
      LBeg := RotLeft[2,1];
      MBeg := RotMid[2,1];
      RBeg := RotRight[2,1];
@@ -212,7 +172,7 @@ begin
           a := 13 + (13 - (a-1))
        else
           a := 13 - ((a+1) - 13);
-       ToFind := chr(a+65);
+       ToFind := chr(a+64);
        a := 0;
 
        //Fourth Rotor (third reversed)
@@ -238,7 +198,35 @@ begin
 
        CipherTxtStr := CipherTxtStr + ToFind;
        ebCipherText.Text := CipherTxtStr;
-       MoveRotors;
+       MoveRotors(0);
+
+       ebRotor1.Enabled := True;
+       ebRotor2.Enabled := True;
+       ebRotor3.Enabled := True;
+       ebPlainText.ReadOnly := False;
+
+     end;
+end;
+
+procedure TfrmMain.btnDecryptClick(Sender: TObject);
+var
+  PlainTxtStr, CipherTxtStr : String;
+  CipherTxtLength, i, a : Integer;
+  ToFind : Char;
+begin
+     CipherRotors;
+     ebRotor1.Enabled := False;
+     ebRotor2.Enabled := False;
+     ebRotor3.Enabled := False;
+     ebPlainText.ReadOnly := True;
+     CipherTxtStr := ebCipherText.Text;
+     CipherTxtLength := Length(CipherTxtStr);
+     for i := 1 to CipherTxtLength do
+     begin
+       ToFind := decryptMessage(CipherTxtStr, upcase(CipherTxtStr[i]));
+       PlainTxtStr := PlainTxtStr + ToFind;
+       ebPlainText.Text := PlainTxtStr;
+       MoveRotors(1);
 
        ebRotor1.Enabled := True;
        ebRotor2.Enabled := True;
@@ -251,7 +239,7 @@ end;
 procedure TfrmMain.FormCreate(Sender: TObject);
 begin
      InitRotors;
-     ebCipherText.ReadOnly := True;
+     //ebCipherText.ReadOnly := True;
 end;
 
 end.

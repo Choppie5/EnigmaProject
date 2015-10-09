@@ -17,7 +17,7 @@
     <VersionInfo>
       <UseVersionInfo Value="True"/>
       <MinorVersionNr Value="1"/>
-      <BuildNr Value="5"/>
+      <BuildNr Value="7"/>
       <Attributes pvaPreRelease="True"/>
       <StringTable ProductVersion=""/>
     </VersionInfo>
@@ -37,7 +37,7 @@
         <PackageName Value="LCL"/>
       </Item1>
     </RequiredPackages>
-    <Units Count="2">
+    <Units Count="4">
       <Unit0>
         <Filename Value="prjEnigma.lpr"/>
         <IsPartOfProject Value="True"/>
@@ -50,6 +50,16 @@
         <ResourceBaseClass Value="Form"/>
         <UnitName Value="uMain"/>
       </Unit1>
+      <Unit2>
+        <Filename Value="udecrypt.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="uDecrypt"/>
+      </Unit2>
+      <Unit3>
+        <Filename Value="urotors.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="uRotors"/>
+      </Unit3>
     </Units>
   </ProjectOptions>
   <CompilerOptions>

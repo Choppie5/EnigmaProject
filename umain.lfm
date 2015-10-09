@@ -1,7 +1,7 @@
 object frmMain: TfrmMain
-  Left = 417
+  Left = 167
   Height = 240
-  Top = 317
+  Top = 710
   Width = 320
   Caption = 'Enigma Encryption'
   ClientHeight = 240
@@ -91,12 +91,21 @@ object frmMain: TfrmMain
     ParentColor = False
   end
   object btnEncrypt: TButton
-    Left = 120
+    Left = 80
     Height = 25
     Top = 184
     Width = 75
     Caption = 'Encrypt'
     OnClick = btnEncryptClick
     TabOrder = 5
+  end
+  object btnDecrypt: TButton
+    Left = 155
+    Height = 25
+    Top = 184
+    Width = 75
+    Caption = 'Decrypt'
+    OnClick = btnDecryptClick
+    TabOrder = 6
   end
 end

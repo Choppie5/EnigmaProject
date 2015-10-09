@@ -4,11 +4,11 @@
     <PathDelim Value="\"/>
     <Version Value="9"/>
     <BuildModes Active="Default"/>
-    <Units Count="2">
+    <Units Count="4">
       <Unit0>
         <Filename Value="prjEnigma.lpr"/>
         <IsPartOfProject Value="True"/>
-        <UsageCount Value="20"/>
+        <UsageCount Value="22"/>
       </Unit0>
       <Unit1>
         <Filename Value="umain.pas"/>
@@ -17,134 +17,166 @@
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
         <UnitName Value="uMain"/>
-        <IsVisibleTab Value="True"/>
-        <CursorPos X="26" Y="215"/>
-        <UsageCount Value="20"/>
+        <TopLine Value="49"/>
+        <CursorPos Y="217"/>
+        <UsageCount Value="22"/>
         <Loaded Value="True"/>
         <LoadedDesigner Value="True"/>
       </Unit1>
+      <Unit2>
+        <Filename Value="udecrypt.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="uDecrypt"/>
+        <IsVisibleTab Value="True"/>
+        <EditorIndex Value="1"/>
+        <TopLine Value="5"/>
+        <CursorPos Y="32"/>
+        <UsageCount Value="22"/>
+        <Loaded Value="True"/>
+      </Unit2>
+      <Unit3>
+        <Filename Value="urotors.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="uRotors"/>
+        <EditorIndex Value="2"/>
+        <TopLine Value="60"/>
+        <CursorPos Y="77"/>
+        <UsageCount Value="22"/>
+        <Loaded Value="True"/>
+      </Unit3>
     </Units>
     <JumpHistory Count="30" HistoryIndex="29">
       <Position1>
-        <Filename Value="umain.pas"/>
-        <Caret Line="206" TopLine="183"/>
+        <Filename Value="udecrypt.pas"/>
+        <Caret Line="30" TopLine="3"/>
       </Position1>
       <Position2>
-        <Filename Value="umain.pas"/>
-        <Caret Line="207" TopLine="184"/>
+        <Filename Value="udecrypt.pas"/>
+        <Caret Line="29" TopLine="3"/>
       </Position2>
       <Position3>
-        <Filename Value="umain.pas"/>
-        <Caret Line="206" TopLine="184"/>
+        <Filename Value="udecrypt.pas"/>
+        <Caret Line="30" TopLine="3"/>
       </Position3>
       <Position4>
-        <Filename Value="umain.pas"/>
-        <Caret Line="207" TopLine="184"/>
+        <Filename Value="udecrypt.pas"/>
+        <Caret Line="29" TopLine="3"/>
       </Position4>
       <Position5>
-        <Filename Value="umain.pas"/>
-        <Caret Line="206" TopLine="184"/>
+        <Filename Value="udecrypt.pas"/>
+        <Caret Line="30" TopLine="3"/>
       </Position5>
       <Position6>
-        <Filename Value="umain.pas"/>
-        <Caret Line="207" TopLine="184"/>
+        <Filename Value="udecrypt.pas"/>
+        <Caret Line="29" TopLine="3"/>
       </Position6>
       <Position7>
-        <Filename Value="umain.pas"/>
-        <Caret Line="206" TopLine="184"/>
+        <Filename Value="udecrypt.pas"/>
+        <Caret Line="30" TopLine="3"/>
       </Position7>
       <Position8>
-        <Filename Value="umain.pas"/>
-        <Caret Line="207" TopLine="184"/>
+        <Filename Value="udecrypt.pas"/>
+        <Caret Line="29" TopLine="3"/>
       </Position8>
       <Position9>
-        <Filename Value="umain.pas"/>
-        <Caret Line="206" TopLine="184"/>
+        <Filename Value="udecrypt.pas"/>
+        <Caret Line="30" TopLine="3"/>
       </Position9>
       <Position10>
-        <Filename Value="umain.pas"/>
-        <Caret Line="207" TopLine="184"/>
+        <Filename Value="udecrypt.pas"/>
+        <Caret Line="29" TopLine="3"/>
       </Position10>
       <Position11>
-        <Filename Value="umain.pas"/>
-        <Caret Line="206" TopLine="184"/>
+        <Filename Value="udecrypt.pas"/>
+        <Caret Line="30" TopLine="3"/>
       </Position11>
       <Position12>
-        <Filename Value="umain.pas"/>
-        <Caret Line="207" TopLine="184"/>
+        <Filename Value="udecrypt.pas"/>
+        <Caret Line="29" TopLine="3"/>
       </Position12>
       <Position13>
-        <Filename Value="umain.pas"/>
-        <Caret Line="206" TopLine="184"/>
+        <Filename Value="udecrypt.pas"/>
+        <Caret Line="30" TopLine="3"/>
       </Position13>
       <Position14>
-        <Filename Value="umain.pas"/>
-        <Caret Line="207" TopLine="184"/>
+        <Filename Value="udecrypt.pas"/>
+        <Caret Line="29" TopLine="3"/>
       </Position14>
       <Position15>
-        <Filename Value="umain.pas"/>
-        <Caret Line="206" TopLine="184"/>
+        <Filename Value="udecrypt.pas"/>
+        <Caret Line="30" TopLine="3"/>
       </Position15>
       <Position16>
-        <Filename Value="umain.pas"/>
-        <Caret Line="207" TopLine="184"/>
+        <Filename Value="udecrypt.pas"/>
+        <Caret Line="29" TopLine="3"/>
       </Position16>
       <Position17>
-        <Filename Value="umain.pas"/>
-        <Caret Line="208" TopLine="194"/>
+        <Filename Value="udecrypt.pas"/>
+        <Caret Line="30" TopLine="3"/>
       </Position17>
       <Position18>
-        <Filename Value="umain.pas"/>
-        <Caret Line="211" TopLine="194"/>
+        <Filename Value="udecrypt.pas"/>
+        <Caret Line="29" TopLine="3"/>
       </Position18>
       <Position19>
-        <Filename Value="umain.pas"/>
-        <Caret Line="212" TopLine="194"/>
+        <Filename Value="udecrypt.pas"/>
+        <Caret Line="30" TopLine="3"/>
       </Position19>
       <Position20>
-        <Filename Value="umain.pas"/>
-        <Caret Line="215" TopLine="194"/>
+        <Filename Value="udecrypt.pas"/>
+        <Caret Line="29" TopLine="3"/>
       </Position20>
       <Position21>
-        <Filename Value="umain.pas"/>
-        <Caret Line="216" TopLine="194"/>
+        <Filename Value="udecrypt.pas"/>
+        <Caret Line="30" TopLine="3"/>
       </Position21>
       <Position22>
-        <Filename Value="umain.pas"/>
-        <Caret Line="220" TopLine="197"/>
+        <Filename Value="udecrypt.pas"/>
+        <Caret Line="29" TopLine="3"/>
       </Position22>
       <Position23>
-        <Filename Value="umain.pas"/>
-        <Caret Line="221" TopLine="198"/>
+        <Filename Value="udecrypt.pas"/>
+        <Caret Line="30" TopLine="3"/>
       </Position23>
       <Position24>
-        <Filename Value="umain.pas"/>
-        <Caret Line="220" TopLine="198"/>
+        <Filename Value="udecrypt.pas"/>
+        <Caret Line="29" TopLine="3"/>
       </Position24>
       <Position25>
-        <Filename Value="umain.pas"/>
-        <Caret Line="221" TopLine="198"/>
+        <Filename Value="udecrypt.pas"/>
+        <Caret Line="30" TopLine="3"/>
       </Position25>
       <Position26>
-        <Filename Value="umain.pas"/>
-        <Caret Line="220" TopLine="198"/>
+        <Filename Value="udecrypt.pas"/>
+        <Caret Line="29" TopLine="3"/>
       </Position26>
       <Position27>
-        <Filename Value="umain.pas"/>
-        <Caret Line="221" TopLine="198"/>
+        <Filename Value="udecrypt.pas"/>
+        <Caret Line="30" TopLine="3"/>
       </Position27>
       <Position28>
-        <Filename Value="umain.pas"/>
-        <Caret Line="220" TopLine="198"/>
+        <Filename Value="udecrypt.pas"/>
+        <Caret Line="29" TopLine="3"/>
       </Position28>
       <Position29>
-        <Filename Value="umain.pas"/>
-        <Caret Line="221" TopLine="204"/>
+        <Filename Value="udecrypt.pas"/>
+        <Caret Line="30" TopLine="3"/>
       </Position29>
       <Position30>
-        <Filename Value="umain.pas"/>
-        <Caret Line="220" TopLine="204"/>
+        <Filename Value="udecrypt.pas"/>
+        <Caret Line="31" TopLine="4"/>
       </Position30>
     </JumpHistory>
   </ProjectSession>
+  <Debugging>
+    <BreakPoints Count="1">
+      <Item1>
+        <Kind Value="bpkSource"/>
+        <WatchScope Value="wpsLocal"/>
+        <WatchKind Value="wpkWrite"/>
+        <Source Value="udecrypt.pas"/>
+        <Line Value="18"/>
+      </Item1>
+    </BreakPoints>
+  </Debugging>
 </CONFIG>
