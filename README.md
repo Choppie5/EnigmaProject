@@ -5,3 +5,5 @@ This project uses the Lazarus IDE, with the Free Pascal Compiler.
 
 This project uses the Lazarus IDE, with the Free Pascal Compiler. It is licensed under GNU General Public License (see LICENSE.md).
 
+Feel free to change anything.
+
