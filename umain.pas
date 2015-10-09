@@ -184,7 +184,7 @@ begin
      PlainTxtLength := Length(PlainTxtStr);
      for i := 1 to PlainTxtLength do
      begin
-       ToFind := PlainTxtStr[i];
+       ToFind := upcase(PlainTxtStr[i]);
        a := 0;
 
        //First Rotor
@@ -212,7 +212,7 @@ begin
           a := 13 + (13 - (a-1))
        else
           a := 13 - ((a+1) - 13);
-       ToFind := chr(a);
+       ToFind := chr(a+64);
        a := 0;
 
        //Fourth Rotor (third reversed)

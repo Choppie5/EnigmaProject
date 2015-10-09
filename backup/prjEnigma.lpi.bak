@@ -15,6 +15,10 @@
       <EnableI18N LFM="False"/>
     </i18n>
     <VersionInfo>
+      <UseVersionInfo Value="True"/>
+      <MinorVersionNr Value="1"/>
+      <BuildNr Value="5"/>
+      <Attributes pvaPreRelease="True"/>
       <StringTable ProductVersion=""/>
     </VersionInfo>
     <BuildModes Count="1">
@@ -37,12 +41,12 @@
       <Unit0>
         <Filename Value="prjEnigma.lpr"/>
         <IsPartOfProject Value="True"/>
-        <UnitName Value="prjEnigma"/>
       </Unit0>
       <Unit1>
         <Filename Value="umain.pas"/>
         <IsPartOfProject Value="True"/>
         <ComponentName Value="frmMain"/>
+        <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
         <UnitName Value="uMain"/>
       </Unit1>
@@ -65,12 +69,6 @@
         </Win32>
       </Options>
     </Linking>
-    <Other>
-      <CompilerMessages>
-        <MsgFileName Value=""/>
-      </CompilerMessages>
-      <CompilerPath Value="$(CompPath)"/>
-    </Other>
   </CompilerOptions>
   <Debugging>
     <Exceptions Count="3">
