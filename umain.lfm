@@ -1,0 +1,111 @@
+object frmMain: TfrmMain
+  Left = 277
+  Height = 240
+  Top = 207
+  Width = 320
+  Caption = 'Enigma Encryption'
+  ClientHeight = 240
+  ClientWidth = 320
+  OnCreate = FormCreate
+  LCLVersion = '1.4.2.0'
+  object lbRotor1: TLabel
+    Left = 56
+    Height = 15
+    Top = 24
+    Width = 60
+    Caption = 'Right Rotor'
+    ParentColor = False
+  end
+  object Label2: TLabel
+    Left = 128
+    Height = 15
+    Top = 24
+    Width = 69
+    Caption = 'Middle Rotor'
+    ParentColor = False
+  end
+  object Label3: TLabel
+    Left = 208
+    Height = 15
+    Top = 24
+    Width = 52
+    Caption = 'Left Rotor'
+    ParentColor = False
+  end
+  object ebRotor1: TEdit
+    Left = 64
+    Height = 23
+    Top = 40
+    Width = 38
+    Alignment = taCenter
+    OnChange = ebRotor1Change
+    TabOrder = 0
+    Text = 'A'
+  end
+  object ebRotor2: TEdit
+    Left = 141
+    Height = 23
+    Top = 40
+    Width = 38
+    Alignment = taCenter
+    TabOrder = 1
+    Text = 'A'
+  end
+  object ebRotor3: TEdit
+    Left = 216
+    Height = 23
+    Top = 40
+    Width = 38
+    Alignment = taCenter
+    TabOrder = 2
+    Text = 'A'
+  end
+  object ebPlainText: TEdit
+    Left = 80
+    Height = 23
+    Top = 104
+    Width = 150
+    TabOrder = 3
+  end
+  object ebCipherText: TEdit
+    Left = 80
+    Height = 23
+    Top = 152
+    Width = 150
+    TabOrder = 4
+  end
+  object lbPlainText: TLabel
+    Left = 128
+    Height = 15
+    Top = 88
+    Width = 50
+    Caption = 'Plain Text'
+    ParentColor = False
+  end
+  object lbCipherText: TLabel
+    Left = 104
+    Height = 15
+    Top = 136
+    Width = 102
+    Caption = 'Enigma Cipher Text'
+    ParentColor = False
+  end
+  object btnEncrypt: TButton
+    Left = 80
+    Height = 25
+    Top = 184
+    Width = 75
+    Caption = 'Encrypt'
+    OnClick = btnEncryptClick
+    TabOrder = 5
+  end
+  object btnDecrypt: TButton
+    Left = 155
+    Height = 25
+    Top = 184
+    Width = 75
+    Caption = 'Decrypt'
+    OnClick = btnDecryptClick
+    TabOrder = 6
+  end
+end
