@@ -74,7 +74,7 @@ var
   i, j : Integer;
   LBeg, MBeg, RBeg : String;
 begin
-     if RotLeft[2,26] <> 'A' then
+     if RotLeft[2,26] <> 'Z' then
         begin
           LTemp := RotLeft[2,26];
           for j := 1 to 25 do
@@ -91,9 +91,9 @@ begin
               MTemp := RotMid[2,26];
               for j := 1 to 25 do
               begin
-                i := 26 - j;
-                RotLeft[2,i] := RotLeft[2,i+1];
-                RotMid[2,i] := RotMid[2,i+1];
+                i := 27 - j;
+                RotLeft[2,i] := RotLeft[2,i-1];
+                RotMid[2,i] := RotMid[2,i-1];
               end;
               RotLeft[2,1] := LTemp;
               RotMid[2,1] := MTemp;
@@ -106,10 +106,10 @@ begin
                   RTemp := RotRight[2,26];
                   for j := 1 to 25 do
                   begin
-                    i := 26 - j;
-                    RotLeft[2,i] := RotLeft[2,i+1];
-                    RotMid[2,i] := RotMid[2,i+1];
-                    RotRight[2,i] := RotRight[2,i+1];
+                    i := 27 - j;
+                    RotLeft[2,i] := RotLeft[2,i-1];
+                    RotMid[2,i] := RotMid[2,i-1];
+                    RotRight[2,i] := RotRight[2,i-1];
                   end;
                   RotLeft[2,1] := LTemp;
                   RotMid[2,1] := MTemp;

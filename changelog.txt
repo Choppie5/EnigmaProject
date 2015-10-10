@@ -16,3 +16,10 @@ Alpha 3 (Version 0.2.0.15) (2015/10/09)
 Alpha 4 (Version 0.2.0.18) (2015/10/09)
 
 - Attempted to fix decryption.
+
+Alpha 5 (Version 0.2.2.20) (2015/10/10)
+
+- Decryption works!
+- Rotor spinning fixed (I think).
+- Rotors now spin correctly for decryption (I hope).
+- Whitespace causes problems, but all alphabetical characters still encrypt and decrypt correctly.
