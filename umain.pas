@@ -167,7 +167,7 @@ begin
        until RotRight[1,a] = ToFind;
        ToFind := RotRight[2,a];
 
-    {   //Reflector
+       //Reflector
        a := 27 - a;
        ToFind := chr(a+64);
        a := 0;
@@ -191,11 +191,12 @@ begin
          a := a + 1;
        until RotLeft[2,a] = ToFind;
        ToFind := RotLeft[1,a];
-       a := 0;   }
+       a := 0;
 
        CipherTxtStr := CipherTxtStr + ToFind;
        ebCipherText.Text := CipherTxtStr;
-       MoveRotors(0);
+       if i <> length(PlainTxtStr) then
+          MoveRotors(0);
 
        ebRotor1.Enabled := True;
        ebRotor2.Enabled := True;
@@ -223,8 +224,9 @@ begin
      begin
        ToFind := decryptMessage(CipherTxtStr, upcase(CipherTxtStr[i]));
        PlainTxtStr := PlainTxtStr + ToFind;
-       ebPlainText.Text := PlainTxtStr;
-       MoveRotors(1);
+       ebPlainText.Text := ReverseString(PlainTxtStr);
+       if i <> CipherTxtLength then
+          MoveRotors(1);
 
        ebRotor1.Enabled := True;
        ebRotor2.Enabled := True;

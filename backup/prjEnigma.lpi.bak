@@ -17,7 +17,8 @@
     <VersionInfo>
       <UseVersionInfo Value="True"/>
       <MinorVersionNr Value="2"/>
-      <BuildNr Value="15"/>
+      <RevisionNr Value="2"/>
+      <BuildNr Value="20"/>
       <Attributes pvaPreRelease="True"/>
       <StringTable ProductVersion=""/>
     </VersionInfo>
