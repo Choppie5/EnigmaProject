@@ -17,7 +17,7 @@ var
 begin
        a := 0;
 
-   {    //First Rotor
+       //First Rotor
        repeat
          a := a + 1;
        until RotLeft[2,a] = ToFind;
@@ -40,7 +40,7 @@ begin
        //Reflector
        a := 27 - a;
        ToFind := chr(a+64);
-       a := 0;         }
+       a := 0;
 
        //Fourth Rotor (third reversed)
        repeat
